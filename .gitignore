@@ -16,6 +16,7 @@
 # Visual Studio Files
 Debug
 Release
+!libs\SFML-2.5.1\bin
 [Bb]in/
 [Oo]bj/
 .vs
