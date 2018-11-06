@@ -96,11 +96,7 @@
       <SubSystem>Console</SubSystem>
     </Link>
     <PostBuildEvent>
-      <Command>MKDIR "$(TargetDir)res"
-XCOPY "$(SolutionDir)res" "$(TargetDir)res" /E /Y /S
-XCOPY "$(SolutionDir)libs\SFML-2.5.1\bin\sfml-graphics-2.dll" "$(TargetDir)" /E /Y /S
-XCOPY "$(SolutionDir)libs\SFML-2.5.1\bin\sfml-system-2.dll" "$(TargetDir)" /E /Y /S
-XCOPY "$(SolutionDir)libs\SFML-2.5.1\bin\sfml-window-2.dll" "$(TargetDir)" /E /Y /S</Command>
+      <Command>$(ProjectDir)copyfiles.bat $(TargetDir) $(SolutionDir)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -131,11 +127,7 @@ XCOPY "$(SolutionDir)libs\SFML-2.5.1\bin\sfml-window-2.dll" "$(TargetDir)" /E /Y
     </Link>
     <PostBuildEvent />
     <PostBuildEvent>
-      <Command>MKDIR "$(TargetDir)res"
-XCOPY "$(SolutionDir)res" "$(TargetDir)res" /E /Y /S
-XCOPY "$(SolutionDir)libs\SFML-2.5.1\bin\sfml-graphics-2.dll" "$(TargetDir)" /E /Y /S
-XCOPY "$(SolutionDir)libs\SFML-2.5.1\bin\sfml-system-2.dll" "$(TargetDir)" /E /Y /S
-XCOPY "$(SolutionDir)libs\SFML-2.5.1\bin\sfml-window-2.dll" "$(TargetDir)" /E /Y /S</Command>
+      <Command>$(ProjectDir)copyfiles.bat $(TargetDir) $(SolutionDir)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
