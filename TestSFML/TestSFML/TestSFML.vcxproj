@@ -96,7 +96,7 @@
       <SubSystem>Console</SubSystem>
     </Link>
     <PostBuildEvent>
-      <Command>$(ProjectDir)copyfiles.bat $(TargetDir) $(SolutionDir)</Command>
+      <Command>$(ProjectDir)copyfiles.bat $(TargetDir) $(SolutionDir) $(Configuration)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -127,7 +127,7 @@
     </Link>
     <PostBuildEvent />
     <PostBuildEvent>
-      <Command>$(ProjectDir)copyfiles.bat $(TargetDir) $(SolutionDir)</Command>
+      <Command>$(ProjectDir)copyfiles.bat $(TargetDir) $(SolutionDir) $(ConfigurationName)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
